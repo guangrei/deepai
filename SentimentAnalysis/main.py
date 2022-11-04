@@ -1,4 +1,4 @@
-#-*-coding:utf8;-*-
+# -*-coding:utf8;-*-
 from qpycmd import path, droid
 import os
 import requests
@@ -15,6 +15,6 @@ r = requests.post(
 )
 js = r.json()
 if 'output' in js:
-	droid.alert('Sentiment Analysis', '\n'.join(js['output']))
+    droid.alert('Sentiment Analysis', '\n'.join(js['output']))
 else:
-	droid.warn("ERROR", r.text)
+    droid.warn("ERROR", r.text)

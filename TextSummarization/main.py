@@ -1,4 +1,4 @@
-#-*-coding:utf8;-*-
+# -*-coding:utf8;-*-
 from qpycmd import path, droid
 import os
 import requests
@@ -15,8 +15,8 @@ r = requests.post(
 )
 js = r.json()
 if 'output' in js:
-	droid.warn("Text Summarization", js['output'])
-	with open('output.txt', 'w') as f:
-		f.write(js['output'])
+    droid.warn("Text Summarization", js['output'])
+    with open('output.txt', 'w') as f:
+        f.write(js['output'])
 else:
-	droid.warn("ERROR", r.text)
+    droid.warn("ERROR", r.text)
